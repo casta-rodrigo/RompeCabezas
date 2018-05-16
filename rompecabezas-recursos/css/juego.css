@@ -57,13 +57,13 @@ li::before {
 #objetivo img{
   width: 70%;
   margin: auto;
-  /*-webkit-filter: blur(5px);
-  filter: blur(5px);*/
+  -webkit-filter: blur(10px);
+  filter: blur(10px);
 }
-/*#objetico img:hover{
+#objetivo img:hover{
   -webkit-filter: blur(0px);
   filter: blur(0px);
-}*/
+}
 
 
 #juego div {

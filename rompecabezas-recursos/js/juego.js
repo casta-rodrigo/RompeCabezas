@@ -1,6 +1,7 @@
 // Arreglo que contiene las intrucciones del juego 
 var instrucciones = ['1 - El objetivo del juego es armar el rompecabezas mirando lo menos posible la imagen.',
 '2 - Para mover las piezas, utiliza las flechas del teclado'];
+var check;
 // Arreglo para ir guardando los movimientos que se vayan realizando
 var movimientos = [];
 function addLastMove(lastMove){
@@ -10,11 +11,7 @@ function addLastMove(lastMove){
 
 // Representación de la grilla. Cada número representa a una pieza.
 // El 9 es la posición vacía
-var grilla = [
-    [1, 2, 3],
-    [4, 5, 6],
-    [7, 8, 9]
-];
+var grilla = [[1, 2, 3],[4, 5, 6],[7, 8, 9]];
 
 /* Estas dos variables son para guardar la posición de la pieza vacía. 
 Esta posición comienza siendo la [2, 2]*/
@@ -38,12 +35,20 @@ y utilice actualizarUltimoMovimiento para mostrarlo en pantalla */
 /* Esta función va a chequear si el Rompecabezas esta en la posicion ganadora. 
 Existen diferentes formas de hacer este chequeo a partir de la grilla. */
 function chequearSiGano() {
-    //COMPLETAR
+  for (var i = 0; i < grilla.length; i++){
+    for (var j = 0; j < grilla.length; j++){
+      if()
+       check = grilla[i][j];
+      console.log(check);
+    }
+  }
 }
 
 // Implementar alguna forma de mostrar un cartel que avise que ganaste el juego
-function mostrarCartelGanador() {
-    //COMPLETAR
+function mostrarCartelGanador(){
+  if (check == grilla){
+    alert('Ganaste');
+  }
 }
 
 /* Función que intercambia dos posiciones en la grilla.
@@ -255,3 +260,4 @@ iniciar();
 
 ////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////
+
