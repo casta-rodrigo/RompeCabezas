@@ -59,6 +59,7 @@ li::before {
   margin: auto;
   -webkit-filter: blur(10px);
   filter: blur(10px);
+  transition-duration: 2s;
 }
 #objetivo img:hover{
   -webkit-filter: blur(0px);
