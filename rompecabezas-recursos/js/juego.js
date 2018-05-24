@@ -11,6 +11,7 @@ function addLastMove(lastMove){
 // Representación de la grilla. Cada número representa a una pieza.
 // El 9 es la posición vacía
 var grilla = [[1, 2, 3],[4, 5, 6],[7, 8, 9]];
+var grilla_correcta = [[1,2,3], [4,5,6], [7,8,9]];
 
 /* Estas dos variables son para guardar la posición de la pieza vacía. 
 Esta posición comienza siendo la [2, 2]*/
@@ -35,7 +36,7 @@ Existen diferentes formas de hacer este chequeo a partir de la grilla. */
 function chequearSiGano() {
   for (var i = 0; i < grilla.length; i++){
     for (var j = 0; j < grilla[i].length; j++){
-      if(grilla[i][j] >= grilla[i][j+1]){
+      if(grilla[i][j]!== grilla_correcta[i][j]){
         return false;
       }
     }
@@ -66,7 +67,7 @@ function intercambiarPosicionesGrilla(filaPos1, columnaPos1, filaPos2, columnaPo
 
 // Actualiza la posición de la pieza vacía
 function actualizarPosicionVacia(nuevaFila, nuevaColumna) {
-    //COMPLETAR
+  
 }
 
 
