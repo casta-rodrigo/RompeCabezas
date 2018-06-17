@@ -1,6 +1,6 @@
 // Arreglo que contiene las intrucciones del juego 
 var instrucciones = ['1 - El objetivo del juego es armar el rompecabezas mirando lo menos posible la imagen.',
-'2 - Para mover las piezas, utiliza las flechas del teclado'];
+'2 - Para mover las piezas, utiliza las flechas del teclado', '3 - Para elegir que pieza mover posiciona el cursor sobre ella.'];
 // Arreglo para ir guardando los movimientos que se vayan realizando
 var movimientos = [];
 function addLastMove(lastMove){
@@ -60,9 +60,9 @@ En vez de intercambiar esos valores vamos a terminar teniendo en ambas posicione
 Se te ocurre cómo solucionar esto con una variable temporal?
 */
 function intercambiarPosicionesGrilla(filaPos1, columnaPos1, filaPos2, columnaPos2) {
-  var aux = grilla[columnaPos1][filaPos1];
-  grilla[columnaPos1][filaPos1] = grilla[columnaPos2][filaPos2];
-  grilla[columnaPos2][filaPos2] = aux;
+  var aux = grilla[filaPos1][columnaPos1];
+  grilla[filaPos1][columnaPos1] = grilla[filaPos2][columnaPos2];
+  grilla[filaPos2][columnaPos2] = aux;
 }
 
 // Actualiza la posición de la pieza vacía
@@ -102,14 +102,14 @@ function moverEnDireccion(direccion) {
     
   // Mueve pieza hacia la derecha, reemplazandola con la blanca
   else if (direccion === codigosDireccion.DERECHA) {
-    nuevaFilaPiezaVacia = filaVacia - 1;
-    nuevaColumnaPiezaVacia = filaVacia;
+    nuevaFilaPiezaVacia = filaVacia;
+    nuevaColumnaPiezaVacia = columnaVacia -1;
   }
     
   // Mueve pieza hacia la izquierda, reemplazandola con la blanca
   else if (direccion === codigosDireccion.IZQUIERDA) {
-    nuevaFilaPiezaVacia = filaVacia + 1;
-    nuevaColumnaPiezaVacia = filaVacia;
+    nuevaFilaPiezaVacia = filaVacia;
+    nuevaColumnaPiezaVacia = columnaVacia +1;
   }
 
   /* A continuación se chequea si la nueva posición es válida, si lo es, se intercambia. 

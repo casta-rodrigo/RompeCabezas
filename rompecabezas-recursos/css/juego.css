@@ -37,15 +37,23 @@ li::before {
   height: 360px;
 }
 
-.col-60 {
-  background: #E84A5F;
-  width: 1200px;
-
+#juego {
+  background: black;
+  width: 700px;
+  height: 700px;
 }
-.piezas img {
+.piezas {
   width: 33.33%;
+  height: 33.33%;
   float: left;
 }
+.piezas img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+
 
 #flecha{
   font-size: 60px;
